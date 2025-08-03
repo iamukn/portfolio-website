@@ -41,7 +41,7 @@ function App () {
       <AboutMe
         fullName={"Ukaegbu Ndukwe"}
         country={"nigeria"}
-        email={'kingsley@voltacharger.com'}
+        email={'n.u.kingsley@gmail.com'}
         profession={"Software Engineer"}
         ref={aboutRef}
         title="Software Engineer & Research Scientist"
@@ -112,7 +112,7 @@ function App () {
       </MyProject>
 
       <GetInTouch
-        emailAddr={"kingsley@voltacharger.com"}
+        emailAddr={"n.u.kingsley@gmail.com"}
         phone={'+2347037676797'}
         location={'Abuja, Nigeria'}
         github={'https://github.com/iamukn/'}
