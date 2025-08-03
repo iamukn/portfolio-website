@@ -29,7 +29,7 @@ export default function GetInTouch({description, emailAddr, phone, location, git
     const emailRef = useRef<HTMLInputElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
     const subjectRef = useRef<HTMLInputElement | null>(null);
-    const messageRef = useRef<HTMLInputElement | null>(null);
+    const messageRef = useRef<HTMLTextAreaElement | null>(null);
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const sendEmailRef = useRef<number | null>(null);
     function handleSubmit (e:any) {
