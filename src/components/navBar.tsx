@@ -1,7 +1,7 @@
 import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import BrandName from "./brandName"
 import Switch from "./switch"
-import {faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
+import {faMoon} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 

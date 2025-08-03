@@ -9,7 +9,7 @@ export default function Switch ({children}: any) {
 
     
   for (let i = 0; i < techList.length; i++) {
-      techList[i].style.color = 'whitesmoke';
+      (techList[i] as HTMLElement).style.color = 'whitesmoke';
     }
     
     

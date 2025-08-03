@@ -25,13 +25,13 @@ export default function GetInTouch({description, emailAddr, phone, location, git
 
     // email, name, subject and message ref
 
-    const form = useRef<HTMLElement | null>(null);
-    const emailRef = useRef<HTMLElement | null>(null);
-    const nameRef = useRef<HTMLElement | null>(null);
-    const subjectRef = useRef<HTMLElement | null>(null);
-    const messageRef = useRef<HTMLElement | null>(null);
+    const form = useRef<any>(null);
+    const emailRef = useRef<HTMLInputElement | null>(null);
+    const nameRef = useRef<HTMLInputElement | null>(null);
+    const subjectRef = useRef<HTMLInputElement | null>(null);
+    const messageRef = useRef<HTMLInputElement | null>(null);
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const sendEmailRef = useRef<HTMLElement | null>(null);
+    const sendEmailRef = useRef<number | null>(null);
     function handleSubmit (e:any) {
         e.preventDefault();
         if (!email) {
@@ -63,6 +63,7 @@ function submitEmail () {
                 'j8XJYsxEUkX47Ufll'
                 ).then(
                 (result) => {
+                    console.log(result)
                     alert('✅ Email sent: UKN will get back to you shortly👌');
                 },
                 (error) => {
