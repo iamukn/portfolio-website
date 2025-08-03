@@ -78,7 +78,7 @@ function App () {
         title="Personal Portfolio Website"
         description="A responsive, mobile-friendly portfolio website built to showcase my skills, projects, and experience."
         technology={["React", "TypeScript", "Vite"]}
-        githubUrl={"#"}
+        githubUrl={"https://github.com/iamukn/portfolio-website"}
         imageUrl='/portfolio.jpeg'
       />
       <Card
