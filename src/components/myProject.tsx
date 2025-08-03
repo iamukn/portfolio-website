@@ -1,6 +1,7 @@
 import type React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type myProjectProps = {
     description: string
@@ -21,6 +22,6 @@ export default function MyProject({description, children, githubUrl, ref}: myPro
     <div className="card-ctn flex-wrap">
         {children}
     </div>
-    <a style={{textAlign: "center"}} target="_blank" className='gotoGithub' href={githubUrl}><FontAwesomeIcon  icon={faGithub} style={{ marginRight: '0.5rem' }}/>View More on Github</a>
+    <a style={{textAlign: "center"}} target="_blank" className='gotoGithub' href={githubUrl}><FontAwesomeIcon  icon={faGithub as IconProp} style={{ marginRight: '0.5rem' }}/>View More on Github</a>
 </section>
 }

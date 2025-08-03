@@ -1,3 +1,4 @@
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import BrandName from "./brandName"
 import Switch from "./switch"
 import {faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +43,7 @@ export default function NavBar ({skillsRef, aboutRef, myWorkRef, contactMeRef}: 
         </ul>
         
         <Switch>
-            <FontAwesomeIcon icon={faMoon}/>
+            <FontAwesomeIcon icon={faMoon as IconProp}/>
         </Switch>
         <div className="hamburger" id="hamburger" onClick={hamburgerClicked}>&#9776;</div>
     </div>

@@ -3,6 +3,7 @@ import { faEnvelope, faPhone, faLocationPinLock } from '@fortawesome/free-solid-
 import { faGithub, faLinkedinIn, faTwitter} from '@fortawesome/free-brands-svg-icons'; 
 import { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type myProjectProps = {
     description: string
@@ -104,7 +105,7 @@ function submitEmail () {
                 <div className="flex margin-bt width">
                     <div className='flex'>
                         <div className='flex-col-center icon-style'>
-                            <FontAwesomeIcon icon={faEnvelope} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faEnvelope as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                         <div className="flex column bio">
                             <h3>Email:</h3>
@@ -115,7 +116,7 @@ function submitEmail () {
                 <div className="flex margin-bt width">
                     <div className='flex'>
                         <div className='flex-col-center icon-style'>
-                            <FontAwesomeIcon icon={faPhone} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faPhone as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                         <div className="flex column bio">
                             <h3>Phone:</h3>
@@ -126,7 +127,7 @@ function submitEmail () {
                 <div className="flex margin-bt width">
                     <div className='flex'>
                         <div className='flex-col-center icon-style'>
-                            <FontAwesomeIcon icon={faLocationPinLock} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faLocationPinLock as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                         <div className="flex column bio">
                             <h3>Location:</h3>
@@ -141,17 +142,17 @@ function submitEmail () {
                     <div className='flex github-linkedin'>
                       <a href={github} target='_blank'>
                         <div className="icon-style flex-col-center hover link-redirect">
-                            <FontAwesomeIcon icon={faGithub} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faGithub as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                       </a>
                       <a href={linkedin} target='_blank'>
                         <div className="icon-style flex-col-center hover  link-redirect">
-                            <FontAwesomeIcon icon={faLinkedinIn} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faLinkedinIn as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                       </a>
                       <a href={twitter} target='_blank'>
                         <div className="icon-style flex-col-center hover  link-redirect">
-                            <FontAwesomeIcon icon={faTwitter} size={"1x"} color={"#2E5AAC"}/>
+                            <FontAwesomeIcon icon={faTwitter as IconProp} size={"1x"} color={"#2E5AAC"}/>
                         </div>
                       </a>
                     </div>

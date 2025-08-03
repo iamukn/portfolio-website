@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 
 
@@ -28,7 +29,7 @@ export default function Card({title, description, technology, githubUrl, imageUr
                         ))
                     }
                 </ul>
-                <a href={githubUrl} target="_blank" className='github-link'><FontAwesomeIcon  icon={faGithub} style={{ marginRight: '0.2rem' }}/> Code</a>
+                <a href={githubUrl} target="_blank" className='github-link'><FontAwesomeIcon  icon={faGithub as IconProp} style={{ marginRight: '0.2rem' }}/> Code</a>
         </div>
     </div>
 }
