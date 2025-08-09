@@ -7,11 +7,10 @@ type skillsProp = {
     description: string
     skills : Skill[]
     extraSkills: Skill[]
-    ref: any
 }
 
-export default function Skills({description, skills, extraSkills, ref}: skillsProp) {
-    return <section className="flex-col-center skills-ctn" ref={ref}>
+export default function Skills({description, skills, extraSkills}: skillsProp) {
+    return <section className="flex-col-center skills-ctn">
         <h5>My Skills</h5>
         <div className='div-border' id="skills-border-bottom"></div>
         <p className="bio-info" style={{ whiteSpace: "pre-line", textAlign:"center" }}>

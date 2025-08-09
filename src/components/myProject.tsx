@@ -7,12 +7,11 @@ type myProjectProps = {
     description: string
     children: React.ReactNode 
     githubUrl: string
-    ref: any
 }
 
-export default function MyProject({description, children, githubUrl, ref}: myProjectProps) {
+export default function MyProject({description, children, githubUrl}: myProjectProps) {
 
-    return <section className="flex-col-center myproject-ctn" id="my-work" ref={ref}>
+    return <section className="flex-col-center myproject-ctn" id="my-work">
     
     <h5>My Projects</h5>
     <div className='div-border' id="skills-border-bottom"></div>

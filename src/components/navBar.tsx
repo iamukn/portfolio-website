@@ -3,26 +3,10 @@ import BrandName from "./brandName"
 import Switch from "./switch"
 import {faMoon} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from "react-router-dom";
 
 
-type refProps = {
-    skillsRef: React.RefObject<HTMLDivElement>;
-    aboutRef: React.RefObject<HTMLDivElement>;
-    myWorkRef: React.RefObject<HTMLDivElement>;
-    contactMeRef: React.RefObject<HTMLDivElement>;
-} 
-
-
-export default function NavBar ({skillsRef, aboutRef, myWorkRef, contactMeRef}: refProps) {
-
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    function handleScroll(ref: any) {
-        ref.current?.scrollIntoView({behavior: "smooth"})
-    }
-
+export default function NavBar () {
 
     function hamburgerClicked () {
         const navLinks = document.getElementsByClassName('nav-links')[0] as HTMLElement;
@@ -31,20 +15,22 @@ export default function NavBar ({skillsRef, aboutRef, myWorkRef, contactMeRef}: 
         console.log('Hamburger clicked')
     }
 
+    const styles = {cursor: "pointer", color: "whitesmoke"}
 
-    return <div className="flex nav">
+
+    return <nav className="flex nav">
         <BrandName brandName="💻" />
         <ul className="nav-links">
-            <li className="nav-li" style={{ cursor: "pointer" }} onClick={()=>scrollToTop()}>Home</li>
-            <li className="nav-li" style={{ cursor: "pointer" }} onClick={()=>{handleScroll(aboutRef)}}>About</li>
-            <li className="nav-li" style={{ cursor: "pointer" }} onClick={()=>{handleScroll(skillsRef)}}>Skills</li>
-            <li className="nav-li" style={{ cursor: "pointer" }} onClick={()=>{handleScroll(myWorkRef)}}>Projects</li>
-            <li className="nav-li" style={{ cursor: "pointer" }} onClick={()=>{handleScroll(contactMeRef)}}>Contact</li>
+            <NavLink to={'/'} className="nav-li" style={styles}>Home</NavLink>
+            <NavLink to={'/about-me'} className="nav-li" style={styles}>About</NavLink>
+            <NavLink to={'/skills'} className="nav-li" style={styles}>Skills</NavLink>
+            <NavLink to={'/projects'} className="nav-li" style={styles}>Projects</NavLink>
+            <NavLink to={'/get-in-touch'} className="nav-li" style={styles}>Contact</NavLink>
         </ul>
         
         <Switch>
             <FontAwesomeIcon icon={faMoon as IconProp}/>
         </Switch>
         <div className="hamburger" id="hamburger" onClick={hamburgerClicked}>&#9776;</div>
-    </div>
+    </nav>
 }

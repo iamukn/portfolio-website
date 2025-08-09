@@ -1,5 +1,6 @@
 import {faArrowDown  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 type AboutMeProps = {
     fullName : string,
@@ -9,11 +10,12 @@ type AboutMeProps = {
     image: string,
     cvUrl: string,
     title: string,
-    ref: React.RefObject<HTMLDivElement>;
+    aboutMeInfo: string
+    aboutMeExpertise: string
 }
 
-export default function AboutMe ({fullName, title, country, email, profession, image, cvUrl, ref}: AboutMeProps) {
-    return <section className="flex-col-center about-me" ref={ref}>
+export default function AboutMe ({fullName, title, country, email, profession, image, cvUrl, aboutMeInfo, aboutMeExpertise}: AboutMeProps) {
+    return <section className="flex-col-center about-me">
         <FontAwesomeIcon icon={faArrowDown} size="lg" color="#88B0F2" className="arrow" />
         <h3>About Me</h3>
         <div className='div-border'></div>
@@ -23,12 +25,8 @@ export default function AboutMe ({fullName, title, country, email, profession, i
             </div>
             <div className='about-me-info-container'>
                 <h3>{title}</h3>  
-                <p className='bio-info'>
-                  I'm a passionate Software Engineer with extensive experience in building robust web applications and systems. My journey in technology started with a deep curiosity about how things work, which evolved into a career focused on creating efficient, scalable, and user-centered solutions.
-                </p>         
-                <p className='bio-info'>
-                  With expertise in Python, JavaScript, AWS, and database technologies like SQL, DynamoDB and MongoDB, I enjoy tackling complex problems and transforming them into elegant solutions. I'm particularly interested in cloud architecture, containerization, and building performant web applications.
-                </p>
+                <p className='bio-info'>{aboutMeInfo}</p>    
+                <p className='bio-info'>{aboutMeExpertise}</p>
                 <div className='flex about-me-contact-info'>
                     <div>
                         <h4 className='h-info'>Name:</h4>

@@ -13,10 +13,9 @@ type myProjectProps = {
     github: string
     linkedin: string
     twitter: string
-    ref: React.RefObject<HTMLDivElement>
 }
 
-export default function GetInTouch({description, emailAddr, phone, location, github, linkedin, twitter, ref}: myProjectProps) {
+export default function GetInTouch({description, emailAddr, phone, location, github, linkedin, twitter}: myProjectProps) {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [subject, setSubject] = useState("");
@@ -90,7 +89,7 @@ function submitEmail () {
     }
   }
 
-    return <section className="flex-col-center get-in-touch-ctn" ref={ref}>
+    return <section className="flex-col-center get-in-touch-ctn">
     
     <h5>Get In Touch</h5>
     <div className='div-border' id="skills-border-bottom"></div>
@@ -186,7 +185,7 @@ function submitEmail () {
                             value={email}
                             ref={emailRef}
                             onChange={(e)=> setEmail(e.target.value)}
-                            placeholder='johndoe@example.com'
+                            placeholder='Johndoe@example.com'
                             className="form-label"
                             />
                     </div>

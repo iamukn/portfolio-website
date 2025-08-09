@@ -20,8 +20,11 @@ body.light-mode {
 
 
 .app-wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -203,6 +206,20 @@ transform: scale(1.05);
 }
 
 
+.bulb {
+  padding: 0.5rem 1rem;
+  background-color: none;
+  border-radius: 50px;
+  transition: background-color 0.8s ease;
+}
+
+.bulb:hover {
+  padding: 0.5rem 1rem;
+  background-color: #88B0F2;
+  border-radius: 50px;
+}
+
+
 .skills-container {
   width: 50%;
   display: flex;
@@ -288,6 +305,7 @@ transform: scale(1.05);
 
 .bio-info {
   font-size: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .about-me-info-container {
@@ -305,6 +323,7 @@ transform: scale(1.05);
   margin-bottom: 8px;
   font-size: 1rem;
 }
+
 
 a {
   color: #88B0F2;
@@ -698,8 +717,9 @@ label {
 
 
 .footer {
-margin-top: 1rem;
-padding-bottom: 1rem;
+padding: 1rem 0px;
+background-color: #030711;
+color: whitesmoke;
 }
 
 .footer footer {
@@ -846,8 +866,11 @@ padding-bottom: 1rem;
   textarea {
     width: 19.4rem;
   }
-/* 
-  .width-100 {
-    width: 40%;
-  } */
+
+  #email::placeholder,
+  #name::placeholder,
+  #subject::placeholder,
+  #message::placeholder {
+    font-size: 0.75rem;
+  }
 }

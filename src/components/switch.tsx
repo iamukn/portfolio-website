@@ -1,30 +1,31 @@
-
+import { useEffect, useState } from "react"
 
 export default function Switch ({children}: any) { 
-  const toggleTheme = () => {
-    document.body.classList.toggle("light-mode");
-    const cards = document.getElementsByClassName('card')
-    const formCtn = document.getElementsByClassName('form-ctn')[0] as HTMLElement;
-    const techList = document.getElementsByClassName('tech-list');
+  const [lightMode, setLightMode] = useState(false);
 
-    
-  for (let i = 0; i < techList.length; i++) {
-      (techList[i] as HTMLElement).style.color = 'whitesmoke';
+
+  useEffect(()=>{
+    document.body.classList.toggle("light-mode", lightMode);
+    const formCtn = document.querySelector(".form-ctn");
+    const cards = document.querySelectorAll(".card");
+    const techList = document.querySelectorAll(".tech-list");
+
+    if (formCtn) {
+      formCtn.classList.toggle("form-ctn-toggle", lightMode);
     }
-    
-    
 
+    cards.forEach((card) => {
+      card.classList.toggle("bright-border", lightMode);
+    });
 
+    techList.forEach((tech) => {
+      (tech as HTMLElement).style.color = lightMode ? "whitesmoke" : "";
+    });
 
-  formCtn.classList.toggle('form-ctn-toggle');
+  }, [lightMode])
 
-  for (let i = 0; i < cards.length; i++) {
-      cards[i].classList.toggle("bright-border");
-    }
-    
-  };
     return <div className="switch">
-        <span onClick={toggleTheme} style={{ cursor: "pointer" }}>
+        <span className="bulb" onClick={()=>setLightMode(!lightMode)} style={{ cursor: "pointer" }}>
             {children}
         </span>
     </div>
