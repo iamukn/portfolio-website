@@ -158,6 +158,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 50px;
+  gap: 10px;
 }
 
 
@@ -167,7 +168,12 @@ h1 {
  border: 0px;
 }
 
-.contact-me-btn {
+.cv-btn {
+  font-weight: bold; 
+  transition: background-color 0.8s ease;
+}
+
+.contact-me-btn, .cv-btn {
   width: 35%;
   background-color: #0F172A;
   color: #F9FAFB;
@@ -178,11 +184,13 @@ h1 {
   border: 1px solid  rgba(128, 128, 128, 0.2);
 }
 
-.contact-me-btn:hover {
+.contact-me-btn:hover, .cv-btn:hover {
   cursor: pointer;
   background-color:#88B0F2;
   color: #0F172A;
 }
+
+
 
 .hover {
   transition: border 1.2s ease, transform 1.2s ease;
@@ -198,7 +206,7 @@ transform: scale(1.05);
 }
 
 
-.view-my-work-btn {
+.view-my-work-btn, .contact-me-btn {
    width: 50%;
    background-color:#88B0F2;
   color: #0F172A;

@@ -31,6 +31,7 @@ const routers = createBrowserRouter([
                         name="Ukaegbu Ndukwe"
                         description={`Software Engineer specializing in web development with \n Python, JavaScript, DynamoDb and AWS`}
                         skills={['Django', 'Flask', 'FastAPI' ,'Node.js', 'Docker', 'SQL', 'MongoDb', 'Nginx']}
+                        cvUrl={"https://drive.google.com/file/d/1V_ICSaEzyY5wsscPebD2TF1sZb4YgDiU/view?usp=sharing"}
                     />
                 </Base>
     },
@@ -41,11 +42,11 @@ const routers = createBrowserRouter([
                         country={"nigeria"}
                         email={'n.u.kingsley@gmail.com'}
                         profession={"Software Engineer"}
+                        cvUrl={"https://drive.google.com/file/d/1V_ICSaEzyY5wsscPebD2TF1sZb4YgDiU/view?usp=sharing"}
                         title="Software Engineer & Research Scientist"
                         aboutMeExpertise="With expertise in Python, JavaScript, AWS, and database technologies like SQL, DynamoDB and MongoDB, I enjoy tackling complex problems and transforming them into elegant solutions. I'm particularly interested in cloud architecture, containerization, and building performant web applications."
                         aboutMeInfo="I'm a passionate Software Engineer with extensive experience in building robust web applications and systems. My journey in technology started with a deep curiosity about how things work, which evolved into a career focused on creating efficient, scalable, and user-centered solutions."
                         image={'/photo5.jpg'}
-                        cvUrl={"https://drive.google.com/file/d/1V_ICSaEzyY5wsscPebD2TF1sZb4YgDiU/view?usp=sharing"}
                     />
                 </Base>
     },
