@@ -168,12 +168,8 @@ h1 {
  border: 0px;
 }
 
-.cv-btn {
-  font-weight: bold; 
-  transition: background-color 0.8s ease;
-}
 
-.contact-me-btn, .cv-btn {
+.contact-me-btn {
   width: 35%;
   background-color: #0F172A;
   color: #F9FAFB;
@@ -184,7 +180,15 @@ h1 {
   border: 1px solid  rgba(128, 128, 128, 0.2);
 }
 
-.contact-me-btn:hover, .cv-btn:hover {
+
+#cv-btn {
+  background-color: #030711;
+  color: whitesmoke;
+  border: 1px solid #88B0F2;
+  transition: background-color 0.9s ease-out;
+}
+
+.contact-me-btn:hover, #cv-btn:hover {
   cursor: pointer;
   background-color:#88B0F2;
   color: #0F172A;
@@ -774,15 +778,6 @@ color: whitesmoke;
     padding: 1rem;
   }
 
-  .cv-btn {
-    width: 11.5rem;
-    height: 0.0rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   h1 {
     font-size: 2rem;
   }
@@ -794,11 +789,14 @@ color: whitesmoke;
  .btn-container {
   flex-direction: column;
   gap: 0.5rem;
+  border: 1px solid red;
  }
 
- .btn-container button {
+ .btn-container button{
   width: 100%;
  }
+
+ 
 
  .skills-container {
   width: 100%;
