@@ -774,6 +774,15 @@ color: whitesmoke;
     padding: 1rem;
   }
 
+  .cv-btn {
+    width: 11.5rem;
+    height: 0.0rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   h1 {
     font-size: 2rem;
   }
