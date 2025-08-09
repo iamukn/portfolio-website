@@ -12,13 +12,16 @@ import Card from "./components/cards";
 import GetInTouch from "./components/getInTouch";
 
 // Not found component
-import NotFound from "./components/NotFound";
+import Error from "./components/NotFound";
 
 const routers = createBrowserRouter([
     {
       path: "*",
       element: <Base>
-                <NotFound />
+                <Error
+                  code={404}
+                  description="Oops! The page you're looking for doesn't exist."
+                />
                </Base>
     }
     ,
