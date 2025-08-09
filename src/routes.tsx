@@ -11,10 +11,15 @@ import MyProject from "./components/myProject";
 import Card from "./components/cards";
 import GetInTouch from "./components/getInTouch";
 
+// Not found component
+import NotFound from "./components/NotFound";
+
 const routers = createBrowserRouter([
     {
       path: "*",
-      element: <>Not FOund</>
+      element: <Base>
+                <NotFound />
+               </Base>
     }
     ,
     { path: '/',
