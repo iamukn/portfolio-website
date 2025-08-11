@@ -3,23 +3,24 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import NavBar from './components/navBar';
 import Footer from './components/footer';
-import { RouterProvider } from 'react-router-dom';
+import { Outlet, RouterProvider } from 'react-router-dom';
 import routers from './routes';
 
 
 
 const root = document.getElementById("app");
 
-type BaseProps = {
-  children: React.ReactNode
-}
+// type BaseProps = {
+//   children: React.ReactNode
+// }
 
-export default function Base ({children}: BaseProps) {
+export default function Base () {
 
   return <StrictMode>
     <div className="app-wrapper">
       <NavBar/>
-      {children}
+      {/* {children} */}
+      <Outlet />
       <Footer
         name='Ukaegbu Ndukwe'
       />
