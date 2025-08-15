@@ -31,12 +31,11 @@ export default function GetInTouch({description, emailAddr, phone, location, git
     const messageRef = useRef<HTMLTextAreaElement | null>(null);
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const sendEmailRef = useRef<number | null>(null);
+
     function handleSubmit (e:any) {
         e.preventDefault();
-        if (!email) {
-            emailRef.current!.focus();
-         }
-          else if (!regex.test(email)) {
+        console.log(name)
+        if (!email || !regex.test(email)) {
             emailRef.current!.focus();
         } else if (!name) {
             nameRef.current!.focus()
@@ -44,9 +43,11 @@ export default function GetInTouch({description, emailAddr, phone, location, git
             subjectRef.current!.focus()
         } else if (!message) {
             messageRef.current!.focus()
-        } else {
+        } 
+        else {
         setDisplay(false)
         submitEmail();
+        // console.log('Awesome')
         }
     }
 
@@ -219,7 +220,7 @@ function submitEmail () {
                     type='submit'
                     className='submit-btn'
                     style={{display: "block"}}   
-                    disabled={!email || !name || !subject || !message}   
+                    onClick={handleSubmit}
                     >
                         Submit
                 </button> :
